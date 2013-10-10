@@ -42,6 +42,7 @@ Options:
 ---
 
 **Todo**
+
 1. Autocompletion
 
 2. Reproducing the `bd foo` mechanisme using (bd foo)
