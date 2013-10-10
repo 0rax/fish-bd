@@ -7,7 +7,7 @@ Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaran
 
 Description:
     Quickly go back to a parent directory up in your current working directory tree.
-    Don't write 'cd ../../..' redundantly, use bd insteand.
+    Don't write 'cd ../../..' redundantly, use bd instead.
 
 Usage:
     bd [option] <directory name>
