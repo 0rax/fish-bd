@@ -1,9 +1,9 @@
 fish-bd
 =======
 
-This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran 
-
 #### Quickly go back to a parent directory up in your current working directory tree. Don't write 'cd ../../..' redundantly, use bd insteand.
+
+This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran 
 
 ---
 
@@ -43,5 +43,7 @@ Options:
 
 **Todo**
 1. Autocompletion
+
 2. Reproducing the `bd foo` mechanisme using (bd foo)
+
 3. Add How-To-Install and Usage in README.md
