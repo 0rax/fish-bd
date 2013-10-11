@@ -32,19 +32,20 @@ Example:
     > bd -i P
     # And you are now in /home/user/my/path/
 Options:
-    -s      Seems mode : goes back to the first directory containing string
-            Set it as default using (set -gx BD_OPT 'sensitive')
-    -i      Case insensitive move (implies seems mode)
-            Set it as default using (set -gx BD_OPT 'insensitive')    
-    -h      Display this help text"
+    -s		Seems mode : goes back to the first directory containing string
+    		Set it as default using (set -gx BD_OPT 'sensitive')
+    -i		Case insensitive move (implies seems mode)
+    		Set it as default using (set -gx BD_OPT 'insensitive')    
+    --help		Display this help text
+
+    Option must be unique and the first argument due to shell limitation.
+    Except for -si/-is for compatibility with the bash version.
 ```
 
 ---
 
 **Todo**
 
-1. Autocompletion
+1. Reproducing the `bd foo` mechanisme using (bd foo)
 
-2. Reproducing the `bd foo` mechanisme using (bd foo)
-
-3. Add How-To-Install and Usage in README.md
+2. Add How-To-Install and Usage in README.md

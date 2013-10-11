@@ -1,4 +1,9 @@
 #!/usr/bin/fish
+#
+# fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
+# https://github.com/0rax/bd-fish
+#
+
 function __bd_usage
     printf "fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
 https://github.com/0rax/bd-fish
@@ -26,7 +31,10 @@ Options:
     \t\tSet it as default using (set -gx BD_OPT 'sensitive')
     -i\t\tCase insensitive move (implies seems mode)
     \t\tSet it as default using (set -gx BD_OPT 'insensitive')    
-    -h\t\tDisplay this help text"
+    --help\t\tDisplay this help text
+
+    Option must be unique and the first argument due to shell limitation.
+    Except for -si/-is for compatibility with the bash version."
 end
 
 function bd
@@ -69,7 +77,7 @@ function bd
             set __bd_opts "insensitive"
             set __bd_arg $argv[2]
         end
-    case '-h'
+    case '--help'
         __bd_usage
         return 0
     case '*'
