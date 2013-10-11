@@ -19,12 +19,12 @@ Example:
     # or
     > bd -s pa
     # or
-    > bd -si P
+    > bd -i P
     # And you are now in /home/user/my/path/
 Options:
     -s\t\tSeems mode : goes back to the first directory containing string
     \t\tSet it as default using (set -gx BD_OPT 'sensitive')
-    -si\t\tCase insensitive move (implies seems mode)
+    -i\t\tCase insensitive move (implies seems mode)
     \t\tSet it as default using (set -gx BD_OPT 'insensitive')    
     -h\t\tDisplay this help text"
 end
@@ -49,6 +49,15 @@ function bd
             return 1
         else
             set __bd_opts "sensitive"
+            set __bd_arg $argv[2]
+        end
+    case "-i"
+        if test "$argv[1]" = "$argv[-1]"
+            echo "No argument."
+            __bd_usage
+            return 1
+        else
+            set __bd_opts "insensitive"
             set __bd_arg $argv[2]
         end
     case "-si"

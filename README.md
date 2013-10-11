@@ -1,7 +1,7 @@
 fish-bd
 =======
 
-#### Quickly go back to a parent directory up in your current working directory tree. Don't write 'cd ../../..' redundantly, use bd insteand.
+#### Quickly go back to a parent directory up in your current working directory tree. Don't write 'cd ../../..' redundantly, use bd instead.
 
 This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran 
 
@@ -29,12 +29,12 @@ Example:
     # or
     > bd -s pa
     # or
-    > bd -si P
+    > bd -i P
     # And you are now in /home/user/my/path/
 Options:
     -s      Seems mode : goes back to the first directory containing string
             Set it as default using (set -gx BD_OPT 'sensitive')
-    -si     Case insensitive move (implies seems mode)
+    -i      Case insensitive move (implies seems mode)
             Set it as default using (set -gx BD_OPT 'insensitive')    
     -h      Display this help text"
 ```
