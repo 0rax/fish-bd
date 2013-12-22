@@ -50,9 +50,11 @@ Options:
 **Installation**
 
 Using Make:
-Run `make install`. Assumes your fish config directory is ~/.config/fish
 
-Manual install:
+Run `make install`. Assumes your fish config directory is `~/.config/fish`.
+
+Manual Install:
+
 Copy `bd.fish` into the `/functions` directory off of your fish config root.
 Copy `completions/bd.fish` into the `/completions` directory off of your fish 
 config root.
