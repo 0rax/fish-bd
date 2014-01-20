@@ -1,13 +1,18 @@
-fish-bd
-=======
+fish-bd-osx
+===========
 
-#### Quickly go back to a parent directory up in your current working directory tree. Don't write 'cd ../../..' redundantly, use bd instead.
+**Quickly go back to a parent directory up in your current working directory tree.**  
+**Don't write 'cd ../../..' redundantly, use bd instead.**
+
+This is a fork of [0rax/fish-bd](https://github.com/0rax/fish-bd) that fixes tab completion and 
+installation for OSX.
 
 This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran 
 
----
 
-**Usage**
+
+Usage
+-----
 
 ```
 fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
@@ -42,10 +47,15 @@ Options:
     Except for -si/-is for compatibility with the bash version.
 ```
 
----
+Installation
+------------
 
-**Todo**
+#### Using Make
+Run `make install`. Assumes your fish config directory is `~/.config/fish`.
 
-1. Reproducing the `bd foo` mechanisme using (bd foo)
+#### Manual Install
+Copy `bd.fish` into the `/functions` directory off of your fish config root.  
+Copy `completions/bd.fish` into the `/completions` directory off of your fish 
+config root.
 
-2. Add How-To-Install and Usage in README.md
+
