@@ -4,9 +4,6 @@ fish-bd-osx
 **Quickly go back to a parent directory up in your current working directory tree.**  
 **Don't write 'cd ../../..' redundantly, use bd instead.**
 
-This is a fork of [0rax/fish-bd](https://github.com/0rax/fish-bd) that fixes tab completion and 
-installation for OSX.
-
 This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran 
 
 
