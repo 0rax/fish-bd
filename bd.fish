@@ -1,4 +1,5 @@
 #!/usr/bin/fish
+# -*-  mode:fish; tab-width:4  -*-
 #
 # fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
 # https://github.com/0rax/bd-fish
