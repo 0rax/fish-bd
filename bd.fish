@@ -6,8 +6,8 @@
 #
 
 function __bd_usage
-    printf "fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
-https://github.com/0rax/bd-fish
+    printf "# fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
+# https://github.com/0rax/bd-fish
 
 Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaranr/bd)
 
@@ -27,6 +27,7 @@ Example:
     # or
     > bd -i P
     # And you are now in /home/user/my/path/
+	
 Options:
     -c\t\tClassic mode : goes back to the first directory named as the string
 	\t\tSet if default using (set -gx BD_OPT 'classic')
