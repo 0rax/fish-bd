@@ -39,8 +39,7 @@ Options:
     --help\t\tDisplay this help text
 
     Option must be unique and the first argument due to shell limitation.
-    Except for -si/-is for compatibility with the bash version.
-	"
+    Except for -si/-is for compatibility with the bash version.\n"
 end
 
 function bd
