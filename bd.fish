@@ -1,4 +1,4 @@
-#!/usr/bin/fish
+#!/usr/bin/env fish
 # -*-  mode:fish; tab-width:4  -*-
 #
 # fish-bd 1.0 by Jean-Philippe Roemer <roemer.jp@gmail.com>
@@ -28,6 +28,8 @@ Example:
     > bd -i P
     # And you are now in /home/user/my/path/
 Options:
+    -c\t\tClassic mode : goes back to the first directory named as the string
+	\t\tSet if default using (set -gx BD_OPT 'classic') (Default when BD_OPT not specified)
     -s\t\tSeems mode : goes back to the first directory containing string
     \t\tSet it as default using (set -gx BD_OPT 'sensitive')
     -i\t\tCase insensitive move (implies seems mode)
@@ -78,10 +80,29 @@ function bd
             set __bd_opts "insensitive"
             set __bd_arg $argv[2]
         end
+	case "-c"
+        if test "$argv[1]" = "$argv[-1]"
+            echo "No argument."
+            __bd_usage
+            return 1
+        else
+            set __bd_opts "classic"
+            set __bd_arg $argv[2]
+        end
+	case "-ci"
+        if test "$argv[1]" = "$argv[-1]"
+            echo "No argument."
+            __bd_usage
+            return 1
+        else
+            set __bd_opts "insensitive"
+            set __bd_arg $argv[2]
+        end
     case '--help'
         __bd_usage
         return 0
     case '*'
+		set __bd_opts "classic"
         set __bd_arg $argv[1]
     end
 
@@ -92,7 +113,7 @@ function bd
     case "insensitive"
         set __bd_newpwd (echo $__bd_oldpwd | sed 's|\(.*/'$__bd_arg'[^/]*/\).*|\1|I')
         set __bd_index  (echo $__bd_newpwd | awk '{ print index(tolower($0),tolower("/'$__bd_arg'")); }')
-    case '*'
+    case 'classic'
         set __bd_newpwd (echo $__bd_oldpwd | sed 's|\(.*/'$__bd_arg'/\).*|\1|')
         set __bd_index  (echo $__bd_newpwd | awk '{ print index($1,"/'$__bd_arg'/"); }')    
     end
