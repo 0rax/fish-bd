@@ -30,7 +30,7 @@ Example:
 Options:
     -c\t\tClassic mode : goes back to the first directory named as the string
 	\t\tSet if default using (set -gx BD_OPT 'classic')
-	\t\tDefault mode when BD_OPT is not specified or no cli option are specified
+	\t\tDefault mode when BD_OPT or CLI options are specified
     -s\t\tSeems mode : goes back to the first directory containing string
     \t\tSet it as default using (set -gx BD_OPT 'sensitive')
     -i\t\tCase insensitive move (implies seems mode)
