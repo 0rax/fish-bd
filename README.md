@@ -1,5 +1,5 @@
-fish-bd-osx
-===========
+fish-bd
+=======
 
 **Quickly go back to a parent directory up in your current working directory tree.**  
 **Don't write 'cd ../../..' redundantly, use bd instead.**
