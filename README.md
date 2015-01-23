@@ -36,7 +36,7 @@ Example:
 	
 Options:
     -c		Classic mode : goes back to the first directory named as the string
-	    		Set if default using (set -gx BD_OPT 'classic')
+	    		Set it as default using (set -gx BD_OPT 'classic')
 	    		Default mode when BD_OPT or CLI options are specified
     -s		Seems mode : goes back to the first directory containing string
     	    	Set it as default using (set -gx BD_OPT 'sensitive')
