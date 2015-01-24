@@ -1,10 +1,10 @@
 fish-bd
 =======
 
-**Quickly go back to a parent directory up in your current working directory tree.**  
+**Quickly go back to a parent directory up in your current working directory tree.**
 **Don't write 'cd ../../..' redundantly, use bd instead.**
 
-This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran 
+This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran
 
 
 
@@ -33,15 +33,15 @@ Example:
     # or
     > bd -i P
     # And you are now in /home/user/my/path/
-	
+
 Options:
     -c		Classic mode : goes back to the first directory named as the string
-	    		Set if default using (set -gx BD_OPT 'classic')
+	    		Set it as default using (set -gx BD_OPT 'classic')
 	    		Default mode when BD_OPT or CLI options are specified
     -s		Seems mode : goes back to the first directory containing string
     	    	Set it as default using (set -gx BD_OPT 'sensitive')
     -i		Case insensitive move (implies seems mode)
-    	    	Set it as default using (set -gx BD_OPT 'insensitive')    
+    	    	Set it as default using (set -gx BD_OPT 'insensitive')
     --help	Display this help text
 
     Option must be unique and the first argument due to shell limitation.
@@ -55,8 +55,8 @@ Installation
 Run `make install`. Assumes your fish config directory is `~/.config/fish`.
 
 #### Manual Install
-Copy `bd.fish` into the `/functions` directory off of your fish config root.  
-Copy `completions/bd.fish` into the `/completions` directory off of your fish 
+Copy `bd.fish` into the `/functions` directory off of your fish config root.
+Copy `completions/bd.fish` into the `/completions` directory off of your fish
 config root.
 
 
