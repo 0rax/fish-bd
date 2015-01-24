@@ -52,9 +52,8 @@ function bd
 
     switch "$argv[1]"
     case "[1]"
-        echo "No argument."
-        __bd_usage
-        return 1
+        cd ..
+        return 0
     case "-s"
         if test "$argv[1]" = "$argv[-1]"
             echo "No argument."
