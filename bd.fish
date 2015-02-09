@@ -48,7 +48,7 @@ function bd
 	set -l __bd_arg
 	set -l __bd_opts $BD_OPT
 
-	set args (getopt -u -n fish-bd -l help -- "csi" $argv | sed 's/^ //g; s/ /\n/g')
+	set args (getopt -u fish-bd -l help -- "csi" $argv | sed 's/^ //g; s/ /\n/g')
 
 	set -l i 1
 	for arg in $args
