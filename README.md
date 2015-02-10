@@ -41,7 +41,7 @@ Options:
             Set it as default using (set -gx BD_OPT 'sensitive')
     -i		Case insensitive move (implies seems mode)
             Set it as default using (set -gx BD_OPT 'insensitive')
-    --help	Display this help text
+    -h	    Display this help text
 
 ```
 
