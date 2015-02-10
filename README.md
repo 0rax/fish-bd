@@ -1,6 +1,8 @@
 fish-bd
 =======
 
+[![Join the chat at https://gitter.im/0rax/fish-bd](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/0rax/fish-bd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 **Quickly go back to a parent directory up in your current working directory tree.**
 **Don't write 'cd ../../..' redundantly, use bd instead.**
 
