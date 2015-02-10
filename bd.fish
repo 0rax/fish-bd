@@ -6,7 +6,7 @@
 #
 
 function __bd_usage
-	printf "# fish-bd 1.1 by Jean-Philippe Roemer <roemer.jp@gmail.com>
+	printf "# fish-bd 1.1.1 by Jean-Philippe Roemer <roemer.jp@gmail.com>
 # https://github.com/0rax/bd-fish
 
 Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaranr/bd)
@@ -29,14 +29,14 @@ Example:
     # And you are now in /home/user/my/path/
 
 Options:
-    -c\t\tClassic mode : goes back to the first directory named as the string
+    -c\t\tClassic mode : goes back to the first directory named as the string (default)
 	\t\tSet if default using (set -gx BD_OPT 'classic')
 	\t\tDefault mode when BD_OPT or CLI options are specified
     -s\t\tSeems mode : goes back to the first directory containing string
     \t\tSet it as default using (set -gx BD_OPT 'sensitive')
     -i\t\tCase insensitive move (implies seems mode)
     \t\tSet it as default using (set -gx BD_OPT 'insensitive')
-    --help\tDisplay this help text
+    -h\t\tDisplay help and exit
 "
 end
 
@@ -48,7 +48,11 @@ function bd
 	set -l __bd_arg
 	set -l __bd_opts $BD_OPT
 
-	set args (getopt -u -n fish-bd -l help -- "csi" $argv | sed 's/^ //g; s/ /\n/g')
+	set args (getopt "csih" $argv)
+	if [ $status -gt 0 ]
+        	return 1
+	end
+	set args (echo $args | sed 's/^ //g' | tr ' ' '\n')
 
 	set -l i 1
 	for arg in $args
@@ -65,7 +69,7 @@ function bd
 		case "--"
 			set i (math $i + 1)
 			break
-		case "--help"
+		case "-h"
 			__bd_usage
 			return 0
 		end
