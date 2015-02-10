@@ -36,7 +36,7 @@ Options:
     \t\tSet it as default using (set -gx BD_OPT 'sensitive')
     -i\t\tCase insensitive move (implies seems mode)
     \t\tSet it as default using (set -gx BD_OPT 'insensitive')
-    --help\tDisplay this help text
+    -h\t\tDisplay this help text
 "
 end
 
@@ -48,7 +48,11 @@ function bd
 	set -l __bd_arg
 	set -l __bd_opts $BD_OPT
 
-	set args (getopt -u -n fish-bd -l help -- "csi" $argv | sed 's/^ //g; s/ /\n/g')
+	set args (getopt "csih" $argv)
+    if [ $status -gt 0 ]
+        return 1
+    end
+    set args (echo $args | sed 's/^ //g; s/ /\n/g')
 
 	set -l i 1
 	for arg in $args
@@ -65,7 +69,7 @@ function bd
 		case "--"
 			set i (math $i + 1)
 			break
-		case "--help"
+		case "-h"
 			__bd_usage
 			return 0
 		end
