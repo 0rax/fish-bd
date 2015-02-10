@@ -49,10 +49,10 @@ function bd
 	set -l __bd_opts $BD_OPT
 
 	set args (getopt "csih" $argv)
-    if [ $status -gt 0 ]
-        return 1
-    end
-    set args (echo $args | sed 's/^ //g; s/ /\n/g')
+	if [ $status -gt 0 ]
+        	return 1
+	end
+	set args (echo $args | sed 's/^ //g' | tr ' ' '\n')
 
 	set -l i 1
 	for arg in $args
