@@ -52,7 +52,7 @@ function bd
 	if [ $status -gt 0 ]
         	return 1
 	end
-	set args (echo $args | sed 's/^ //g' | tr ' ' '\n')
+	set args (echo $args | sed 's/^\s//' | tr ' ' '\n')
 
 	set -l i 1
 	for arg in $args
@@ -63,9 +63,6 @@ function bd
 			set __bd_opts "insensitive"
 		case "-c"
 			set __bd_opts "classic"
-		case "--help"
-			__bd_usage
-			return 0
 		case "--"
 			set i (math $i + 1)
 			break
