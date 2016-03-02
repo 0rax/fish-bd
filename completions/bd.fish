@@ -1,7 +1,10 @@
 #!/usr/bin/env fish
 # -*-  mode:fish; tab-width:4  -*-
+#
+# fish-completion for fish-bd by Jean-Philippe Roemer <jp@roemer.im>
+# https://github.com/0rax/fish-bd
+#
 
-#completion for bd
 complete -c bd -s c --description "Classic mode : goes back to the first directory named as the string"
 complete -c bd -s s --description "Seems mode : goes back to the first directory containing string"
 complete -c bd -s i --description "Case insensitive move (implies seems mode)"

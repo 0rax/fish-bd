@@ -8,12 +8,10 @@ fish-bd
 
 This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran
 
-
-
 Usage
 -----
 ```
-# fish-bd 1.1.1 by Jean-Philippe Roemer <roemer.jp@gmail.com>
+# fish-bd 1.2.0 by Jean-Philippe Roemer <jp@roemer.im>
 # https://github.com/0rax/bd-fish
 
 Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaranr/bd)
@@ -36,14 +34,14 @@ Example:
     # And you are now in /home/user/my/path/
 
 Options:
-    -c		Classic mode : goes back to the first directory named as the string (default)
-			Set if default using (set -gx BD_OPT 'classic')
-			Default mode when BD_OPT or CLI options are specified
-    -s		Seems mode : goes back to the first directory containing string
-    		Set it as default using (set -gx BD_OPT 'sensitive')
-    -i		Case insensitive move (implies seems mode)
-    		Set it as default using (set -gx BD_OPT 'insensitive')
-    -h		Display help and exit
+    -c      Classic mode : goes back to the first directory named as the string (default)
+            Set if default using (set -gx BD_OPT 'classic')
+            Default mode when BD_OPT or CLI options are specified
+    -s      Seems mode : goes back to the first directory containing string
+            Set it as default using (set -gx BD_OPT 'sensitive')
+    -i      Case insensitive move (implies seems mode)
+            Set it as default using (set -gx BD_OPT 'insensitive')
+    -h      Display help and exit
 ```
 
 Installation
