@@ -1,5 +1,4 @@
-fish-bd
-=======
+# fish-bd
 
 [![Join the chat at https://gitter.im/0rax/fish-bd](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/0rax/fish-bd?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -8,8 +7,7 @@ fish-bd
 
 This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwaranr/bd) by Vigneshwaran Raveendran
 
-Usage
------
+## Usage
 ```
 # fish-bd 1.2.0 by Jean-Philippe Roemer <jp@roemer.im>
 # https://github.com/0rax/bd-fish
@@ -44,13 +42,24 @@ Options:
     -h      Display help and exit
 ```
 
-Installation
-------------
+## Installation
+#### Using Symlinks (recommended method)
+```
+# This method allows you to update narwhal by just doing a 'git pull'
+git clone https://github.com/0rax/fish-db ~/.config/fish/fish-bd
+mkdir -p ~/.config/fish/functions/ ~/.config/fish/completions/
+ln -s ~/.config/fish/fish-bd/bd.fish ~/.config/fish/functions/
+ln -s ~/.config/fish/fish-bd/completions/bd.fish ~/.config/fish/completions/
+```
 
 #### Using Make
-Run `make install`. Assumes your fish config directory is `~/.config/fish`.
+```
+make install # Assumes your fish config directory is '~/.config/fish'
+```
 
 #### Manual Install
-Copy `bd.fish` into the `/functions` directory off of your fish config root.
-Copy `completions/bd.fish` into the `/completions` directory off of your fish
-config root.
+```
+set -l FISH_CONFIG_FOLDER ~/.config/fish/
+cp bd.fish $FISH_CONFIG_FOLDER/functions/
+cp completions/bd.fish $FISH_CONFIG_FOLDER/completions/
+```
