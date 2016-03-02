@@ -43,12 +43,18 @@ Options:
 ```
 
 ## Installation
-#### Using Symlinks (recommended method)
+#### Using Fisherman (recommended method)
+```
+# This method allows you to update bd automatically via `fisher update`
+fisher install bd
+```
+
+#### Using Symlinks
 ```
 # This method allows you to update narwhal by just doing a 'git pull'
 git clone https://github.com/0rax/fish-db ~/.config/fish/fish-bd
 mkdir -p ~/.config/fish/functions/ ~/.config/fish/completions/
-ln -s ~/.config/fish/fish-bd/bd.fish ~/.config/fish/functions/
+ln -s ~/.config/fish/fish-bd/functions/bd.fish   ~/.config/fish/functions/
 ln -s ~/.config/fish/fish-bd/completions/bd.fish ~/.config/fish/completions/
 ```
 
@@ -60,6 +66,6 @@ make install # Assumes your fish config directory is '~/.config/fish'
 #### Manual Install
 ```
 set -l FISH_CONFIG_FOLDER ~/.config/fish/
-cp bd.fish $FISH_CONFIG_FOLDER/functions/
+cp functions/bd.fish   $FISH_CONFIG_FOLDER/functions/
 cp completions/bd.fish $FISH_CONFIG_FOLDER/completions/
 ```
