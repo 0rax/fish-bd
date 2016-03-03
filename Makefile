@@ -1,3 +1,5 @@
+all:
+
 install:
 
 	install -d ~/.config/fish/functions
@@ -10,3 +12,5 @@ uninstall:
 
 	rm -f ~/.config/fish/functions/bd.fish
 	rm -f ~/.config/fish/completions/bd.fish
+
+.PHONY: all install uninstall
