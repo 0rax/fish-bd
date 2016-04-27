@@ -46,13 +46,13 @@ Options:
 #### Using Fisherman (recommended method)
 ```
 # This method allows you to update bd automatically via `fisher update`
-fisher install bd
+fisher 0rax/fish-bd
 ```
 
 #### Using Symlinks
 ```
 # This method allows you to update narwhal by just doing a 'git pull'
-git clone https://github.com/0rax/fish-db ~/.config/fish/fish-bd
+git clone https://github.com/0rax/fish-bd ~/.config/fish/fish-bd
 mkdir -p ~/.config/fish/functions/ ~/.config/fish/completions/
 ln -s ~/.config/fish/fish-bd/functions/bd.fish   ~/.config/fish/functions/
 ln -s ~/.config/fish/fish-bd/completions/bd.fish ~/.config/fish/completions/
