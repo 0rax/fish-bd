@@ -46,7 +46,7 @@ Options:
 #### Using Fisherman (recommended method)
 ```
 # This method allows you to update bd automatically via `fisher update`
-fisher install bd
+fisher 0rax/fish-bd
 ```
 
 #### Using Symlinks
