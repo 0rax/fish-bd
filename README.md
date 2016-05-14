@@ -9,8 +9,7 @@ This is a fish implementation of [vigneshwaranr/bd](https://github.com/vigneshwa
 
 ## Usage
 ```
-# fish-bd 1.2.0 by Jean-Philippe Roemer <jp@roemer.im>
-# https://github.com/0rax/bd-fish
+# fish-bd 1.2.2 (https://github.com/0rax/bd-fish)
 
 Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaranr/bd)
 
@@ -21,7 +20,7 @@ Description:
 Usage:
     bd [option] <directory name>
 
-Example:
+Examples:
     # You are in /home/user/my/path/is/very/long/
     # And you want to go back to 'path', simple type
     > bd path
@@ -46,7 +45,7 @@ Options:
 #### Using Fisherman (recommended method)
 ```
 # This method allows you to update bd automatically via `fisher update`
-fisher install bd
+fisher install 0rax/fish-bd
 ```
 
 #### Using Symlinks

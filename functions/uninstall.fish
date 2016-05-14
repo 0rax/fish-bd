@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # -*-  mode:fish; tab-width:4  -*-
 #
-# fisher-uninstaller for fish-bd by Jean-Philippe Roemer <jp@roemer.im>
+# fisher-uninstaller for fish-bd
 # https://github.com/0rax/bd-fish
 #
 

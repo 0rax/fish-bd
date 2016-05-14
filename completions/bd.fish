@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 # -*-  mode:fish; tab-width:4  -*-
 #
-# fish-completion for fish-bd by Jean-Philippe Roemer <jp@roemer.im>
+# fish-completion for fish-bd
 # https://github.com/0rax/fish-bd
 #
 

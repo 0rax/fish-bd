@@ -1,13 +1,12 @@
 #!/usr/bin/env fish
 # -*-  mode:fish; tab-width:4  -*-
 #
-# fish-bd 1.2.0 by Jean-Philippe Roemer <jp@roemer.im>
+# fish-bd main & usage function
 # https://github.com/0rax/bd-fish
 #
 
 function __bd_usage
-    printf "# fish-bd 1.2.0 by Jean-Philippe Roemer <jp@roemer.im>
-# https://github.com/0rax/bd-fish
+    printf "# fish-bd 1.2.2 (https://github.com/0rax/bd-fish)
 
 Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaranr/bd)
 
@@ -18,7 +17,7 @@ Description:
 Usage:
     bd [option] <directory name>
 
-Example:
+Examples:
     # You are in /home/user/my/path/is/very/long/
     # And you want to go back to 'path', simple type
     > bd path
