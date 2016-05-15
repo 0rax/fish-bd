@@ -33,9 +33,9 @@ Options:
             Default mode when BD_OPT or CLI options are specified
     -s      Seems mode : goes back to the first directory containing string
             Set it as default using (set -gx BD_OPT 'sensitive')
-    -i      Case insensitive move (implies seems mode)
+    -i    case insensitive move (implies seems mode)
             Set it as default using (set -gx BD_OPT 'insensitive')
-    -h      Display help and exit
+    -h      Print this help and exit
 "
 end
 
@@ -54,16 +54,16 @@ function bd
     set -l i 1
     for arg in $args
         switch $arg
-          case "-s"
+        case "-s"
             set opts "sensitive"
-          case "-i"
+        case "-i"
             set opts "insensitive"
-          case "-c"
+        case "-c"
             set opts "classic"
-          case "--"
+        case "--"
             set i (math $i + 1)
             break
-          case "-h"
+        case "-h"
             __bd_usage
             return 0
         end
@@ -77,11 +77,11 @@ function bd
     end
 
     switch "$opts"
-      case "sensitive"
+    case "sensitive"
         set newpwd (echo $oldpwd | sed 's|\(.*/'$args[$i]'[^/]*/\).*|\1|')
-      case "insensitive"
+    case "insensitive"
         set newpwd (echo $oldpwd | perl -pe 's|(.*/'$args[$i]'[^/]*/).*|$1|i')
-      case '*' # classic
+    case '*' # classic
         set newpwd (echo $oldpwd | sed 's|\(.*/'$args[$i]'/\).*|\1|')
     end
 
