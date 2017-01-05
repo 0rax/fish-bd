@@ -6,9 +6,7 @@
 #
 
 function __bd_usage
-    printf "# fish-bd 1.2.2 (https://github.com/0rax/bd-fish)
-
-Based on bd for bash by Vigneshwaran Raveendran (https://github.com/vigneshwaranr/bd)
+    printf "# fish-bd v1.3.0 (https://github.com/0rax/bd-fish)
 
 Description:
     Quickly go back to a parent directory up in your current working directory tree.
@@ -33,7 +31,7 @@ Options:
             Default mode when BD_OPT or CLI options are specified
     -s      Seems mode : goes back to the first directory containing string
             Set it as default using (set -gx BD_OPT 'sensitive')
-    -i    case insensitive move (implies seems mode)
+    -i      case insensitive move (implies seems mode)
             Set it as default using (set -gx BD_OPT 'insensitive')
     -h      Print this help and exit
 "
@@ -86,7 +84,7 @@ function bd
     end
 
     if [ "$newpwd" = "$oldpwd" ]
-        echo "No such occurence."
+        echo "No such occurence." >&2
     else
         echo "$newpwd"
         cd   "$newpwd"
