@@ -12,7 +12,7 @@ complete -c bd -s h -x --description "Display help and exit"
 complete -c bd -A -f
 
 function __fish_bd_complete_dirs
-	printf (pwd | sed 's|/|\\\n|g')
+    printf (pwd | sed 's%/[^/]*$%/%; s/.$//; s|/|\\\n|g')
 end
 
 complete -c bd -a '(__fish_bd_complete_dirs)'
