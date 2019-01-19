@@ -40,10 +40,10 @@ Options:
 ```
 
 ## Installation
-#### Using Fisherman (recommended method)
+#### Using [Fisher](https://github.com/jorgebucaran/fisher) (recommended method)
 ```
-# This method allows you to update bd automatically via `fisher update`
-fisher install 0rax/fish-bd
+# This method allows you to update bd automatically via `fisher`
+fisher add 0rax/fish-bd
 ```
 
 #### Using Symlinks
@@ -66,3 +66,7 @@ set -l FISH_CONFIG_FOLDER ~/.config/fish/
 cp functions/bd.fish   $FISH_CONFIG_FOLDER/functions/
 cp completions/bd.fish $FISH_CONFIG_FOLDER/completions/
 ```
+
+## License
+
+fish-bd is MIT licensed. See [LICENSE](LICENSE).
