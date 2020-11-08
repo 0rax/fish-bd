@@ -6,14 +6,14 @@
 #
 
 function __bd_usage
-    printf "# fish-bd v1.3.0 (https://github.com/0rax/bd-fish)
+    printf "# fish-bd v1.3.2 (https://github.com/0rax/bd-fish)
 
 Description:
     Quickly go back to a parent directory up in your current working directory tree.
     Don't write 'cd ../../..' redundantly, use bd instead.
 
 Usage:
-    bd [option] <directory name>
+    bd [option] <pattern>
 
 Examples:
     # You are in /home/user/my/path/is/very/long/
@@ -22,18 +22,26 @@ Examples:
     # or
     > bd -s pa
     # or
-    > bd -i P
+    > bd -i Pat
     # And you are now in /home/user/my/path/
 
 Options:
-    -c      Classic mode : goes back to the first directory named as the string (default)
+    -c <pattern>
+            Classic mode : goes back to the first directory matching the pattern (default)
             Set if default using (set -gx BD_OPT 'classic')
             Default mode when BD_OPT or CLI options are specified
-    -s      Seems mode : goes back to the first directory containing string
+    -s <pattern>
+            Seems mode: goes back to the first directory starting with pattern
             Set it as default using (set -gx BD_OPT 'sensitive')
-    -i      case insensitive move (implies seems mode)
+    -i <pattern>
+            Case insensitive mode: same as seems mode without case sensitity
             Set it as default using (set -gx BD_OPT 'insensitive')
     -h      Print this help and exit
+
+Note:
+    Fuzzy matching of a directory can be done with any mode using the built-in
+    fish-shell autocompletion. This allows you to enter any part of the path
+    and still match it.
 "
 end
 
