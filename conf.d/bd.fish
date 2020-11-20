@@ -5,4 +5,6 @@
 # https://github.com/0rax/bd-fish
 #
 
-functions -e __bd_usage
+function _bd_uninstall --on-event bd_uninstall
+	functions -e __bd_usage
+end
