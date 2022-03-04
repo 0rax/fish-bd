@@ -5,8 +5,23 @@
 # https://github.com/0rax/bd-fish
 #
 
-function __bd_usage
-    printf "# fish-bd v1.3.2 (https://github.com/0rax/bd-fish)
+function bd
+
+    set -l oldpwd (pwd)
+    set -l newpwd ""
+    set -l opts   "$BD_OPT"
+    set -l args   (getopt "csih" $argv)
+
+    if [ $status -gt 0 ]
+        return 1
+    end
+    set args (echo $args | sed 's/^\s//' | tr ' ' '\n')
+
+    set -l i 1
+    for arg in $args
+        switch $arg
+        case "-h"
+            printf "# fish-bd v1.3.3 (https://github.com/0rax/bd-fish)
 
 Description:
     Quickly go back to a parent directory up in your current working directory tree.
@@ -41,25 +56,8 @@ Options:
 Note:
     Fuzzy matching of a directory can be done with any mode using the built-in
     fish-shell autocompletion. This allows you to enter any part of the path
-    and still match it.
-"
-end
-
-function bd
-
-    set -l oldpwd (pwd)
-    set -l newpwd ""
-    set -l opts   "$BD_OPT"
-    set -l args   (getopt "csih" $argv)
-
-    if [ $status -gt 0 ]
-        return 1
-    end
-    set args (echo $args | sed 's/^\s//' | tr ' ' '\n')
-
-    set -l i 1
-    for arg in $args
-        switch $arg
+    and still match it.\n"
+            return 0
         case "-s"
             set opts "sensitive"
         case "-i"
@@ -69,9 +67,6 @@ function bd
         case "--"
             set i (math $i + 1)
             break
-        case "-h"
-            __bd_usage
-            return 0
         end
         set i (math $i + 1)
     end
